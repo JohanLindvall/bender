@@ -62,7 +62,7 @@ namespace Bender
             // newest last
             fileinfos.Sort((lhs, rhs) =>
                 {
-                    if (lhs.Modification >= lhs.Creation || rhs.Modification >= rhs.Creation)
+                    if (lhs.Modification >= lhs.Creation && rhs.Modification >= rhs.Creation)
                     {
                         if (lhs.Creation < rhs.Creation) return -1;
                         if (lhs.Creation > rhs.Creation) return 1;
